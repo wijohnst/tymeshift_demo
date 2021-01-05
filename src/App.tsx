@@ -1,12 +1,20 @@
 import React, { ReactElement } from 'react'
 import styled from 'styled-components'
 
-const ComponentWrapper = styled.div``
+import Header from './Header'
+import Intro from './Intro'
+import Adherence from './Adherence'
+
+const ComponentWrapper = styled.div`
+  margin: 5pt;
+`
 
 export default function App(): ReactElement {
   return (
-    <div>
-      Tymeshift Demo
-    </div>
+    <ComponentWrapper>
+      <Header />
+      <Intro />
+      <Adherence />
+    </ComponentWrapper>
   )
 }
