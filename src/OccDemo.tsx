@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { SelectionObj } from './JobSelect'
 import JobSelect from './JobSelect'
-import AdhExplainer from './AdhExplainer'
+import OccExplainer from './OccExplainer'
 
 interface StyleProps {
     visibility: string;
@@ -39,7 +39,7 @@ const Reset = styled.div<StyleProps>`
     }
 `
 
-export default function AdhDemo(): ReactElement {
+export default function OccDemo(): ReactElement {
 
     const [ selection, setSelection ] = useState<SelectionObj | undefined>(undefined);
     const [ hasSelection, setHasSelection ] = useState(false);
@@ -79,7 +79,7 @@ export default function AdhDemo(): ReactElement {
                 {(hasSelection && selection !== undefined ? <Cell color={selection.color}>{selection.text}</Cell> : <Cell><JobSelect handleSelection={handleSelection}/></Cell>)}
             </Grid>
             <Reset visibility={(hasSelection ? "visible" : "hidden")} onClick={() => [setSelection(undefined), setHasSelection(false)]}>Reset</Reset>
-            <AdhExplainer selection={selection} isVisible={hasSelection} />
+            <OccExplainer selection={selection} isVisible={hasSelection} />
         </ComponentWrapper>
     )
 }
