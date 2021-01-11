@@ -1,12 +1,12 @@
 import React, { ReactElement } from 'react'
 import styled from 'styled-components'
 
-import ChatsExplainer from './ChatsExplainer'
-import VoiceExplainer from './VoiceExplainer'
-import TicketsExplainer from './TicketsExplainer'
-import UntrackedExplainer from './UntrackedExplainer'
-import LunchExplainer from './LunchExplainer'
-import STTExplainer from './STTExplainer'
+import ChatsOccExplainer from './ChatsOccExplainer'
+import VoiceOccExplainer from './VoiceOccExplainer'
+import TicketOccExplainer from './TicketOccExplainer'
+import UntrackedOccExplainer from './UntrackedOccExplainer'
+import LunchOccExplainer from './LunchOccExplainer'
+import SttOccExplainer from './SttOccExplainer'
 
 import { SelectionObj } from './JobSelect'
 
@@ -26,12 +26,12 @@ const ComponentWrapper = styled.div<StyleProps>`
 export default function OccExplainer({selection, isVisible}: Props): ReactElement {
     
     const components : any = { 
-        chat: <ChatsExplainer />,
-        voice: <VoiceExplainer />,
-        ticket: <TicketsExplainer />,
-        untracked: <UntrackedExplainer />,
-        lunch: <LunchExplainer />,
-        stt: <STTExplainer />
+        chat: <ChatsOccExplainer />,
+        voice: <VoiceOccExplainer />,
+        ticket: <TicketOccExplainer />,
+        untracked: <UntrackedOccExplainer />,
+        lunch: <LunchOccExplainer />,
+        stt: <SttOccExplainer />
     }
 
     return (
